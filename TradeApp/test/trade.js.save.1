@@ -1,0 +1,16 @@
+const TradeImpl = artifacts.require("TradeImpl");
+
+contract('TradeImpl', (accounts) => {
+  it('Should deploy the contract at some address', async () => {
+    const tradeInstance = await TradeImpl.deployed();
+    assert.ok(tradeInstance.address);
+  });
+
+  it('add a trade ', async () => {
+     const tradeInstance = await TradeImpl.deployed();
+     let tradeDate = (new Date("6/21/2019"));
+     await tradeInstance.addTrade("TD123",accounts[0],accounts[1],1000,6/21/2019");
+  });
+ 
+ });
+

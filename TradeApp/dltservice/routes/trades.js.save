@@ -1,0 +1,39 @@
+var express = require('express');
+var router = express.Router();
+const Web3 = require('web3');
+const tradeInterface = require("../../../TradeApp/build/contracts/TradeInterface").abi;
+console.log(tradeInterface);
+
+const web3js = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
+const contractAddress = "0x3F9C454453Ef0D792A1694eE9e5F2c37575A4f06";
+
+
+/* Post a trade. */
+router.post('/', function(req, res, next) {
+
+  var contract = new web3js.eth.Contract(tradeInterface,contractAddress);
+  contract.methods.addTrade(web3js.utils.asciiToHex('TD123'),
+                           '0xcd0d32aef4ac687b6ea5e362a6ab8c515da836ce',
+                           '0xe0f80cf8705854f17a355d45bb7ad196650d8064',1000,).send({from: web3js.eth.accounts[0]})
+ .then((receipt) => {
+    console.log(receipt);
+ 	   // receipt can also be a new contract instance, when coming from a "contract.deploy({...}).send()"
+	}); 
+
+  res.send('respond with a resource');
+});
+
+
+/* GET specific trade. */
+router.get('/', function(req, res, next) {
+  var contract = new web3js.eth.Contract(tradeInterface,contractAddress);
+
+  contract.methods.getTrade(web3js.utils.asciiToHex('TD123')).call()
+          .then((result) => {
+          console.log(result);
+});
+
+  res.send('respond with a resource');
+});
+
+module.exports = router;

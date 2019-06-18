@@ -1,0 +1,15 @@
+const TradeImpl = artifacts.require("TradeImpl");
+
+contract('TradeImpl', (accounts) => {
+  it('Should deploy the contract at some address', async () => {
+    const tradeInstance = await TradeImpl.deployed();
+    assert.ok(tradeInstance.address);
+  });
+
+it('has a default message', async () => {
+    const message = await inbox.methods.message().call();
+    assert.equal(message, 'Hi there!');
+  });
+ 
+ });
+
