@@ -95,15 +95,15 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"name\":\"_tradeId\",\"type\":\"bytes32\"},{\"name\":\"_fromParty\",\"type\":\"address\"},{\"name\":\"_toParty\",\"type\":\"address\"},{\"name\":\"_amount\",\"type\":\"uint256\"},{\"name\":\"_tradeDate\",\"type\":\"uint256\"}],\"name\":\"addTrade\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"_tradeId\",\"type\":\"bytes32\"}],\"name\":\"getTrade\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"},{\"name\":\"\",\"type\":\"address\"},{\"name\":\"\",\"type\":\"uint256\"},{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"_tradeId\",\"type\":\"bytes32\"},{\"indexed\":false,\"name\":\"_fromParty\",\"type\":\"address\"},{\"indexed\":false,\"name\":\"_toParty\",\"type\":\"address\"},{\"indexed\":false,\"name\":\"_amount\",\"type\":\"uint256\"},{\"indexed\":false,\"name\":\"_tradeDate\",\"type\":\"uint256\"}],\"name\":\"TradeCreated\",\"type\":\"event\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/paliwal_gourav/Ethereum/TradeApp/contracts/TradeInterface.sol\":\"TradeInterface\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/paliwal_gourav/Ethereum/TradeApp/contracts/TradeInterface.sol\":{\"keccak256\":\"0xef13be489eac84776063a4c9ed34959ef059dd7a10740c8310746e3586a5393b\",\"urls\":[\"bzzr://71f07efa8504eb4eb5977043636b96583c76272c0f3b80295154a44e42a7547e\"]}},\"version\":1}",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"name\":\"_tradeId\",\"type\":\"bytes32\"},{\"name\":\"_fromParty\",\"type\":\"address\"},{\"name\":\"_toParty\",\"type\":\"address\"},{\"name\":\"_amount\",\"type\":\"uint256\"},{\"name\":\"_tradeDate\",\"type\":\"uint256\"}],\"name\":\"addTrade\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"_tradeId\",\"type\":\"bytes32\"}],\"name\":\"getTrade\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"},{\"name\":\"\",\"type\":\"address\"},{\"name\":\"\",\"type\":\"uint256\"},{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"_tradeId\",\"type\":\"bytes32\"},{\"indexed\":false,\"name\":\"_fromParty\",\"type\":\"address\"},{\"indexed\":false,\"name\":\"_toParty\",\"type\":\"address\"},{\"indexed\":false,\"name\":\"_amount\",\"type\":\"uint256\"},{\"indexed\":false,\"name\":\"_tradeDate\",\"type\":\"uint256\"}],\"name\":\"TradeCreated\",\"type\":\"event\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/paliwal_gourav/Ethereum/EthereumTraining/TradeApp/contracts/TradeInterface.sol\":\"TradeInterface\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/paliwal_gourav/Ethereum/EthereumTraining/TradeApp/contracts/TradeInterface.sol\":{\"keccak256\":\"0xef13be489eac84776063a4c9ed34959ef059dd7a10740c8310746e3586a5393b\",\"urls\":[\"bzzr://71f07efa8504eb4eb5977043636b96583c76272c0f3b80295154a44e42a7547e\"]}},\"version\":1}",
   "bytecode": "0x",
   "deployedBytecode": "0x",
   "sourceMap": "",
   "deployedSourceMap": "",
   "source": "pragma solidity >=0.5.1 <0.6.0;\n\ninterface TradeInterface {\n    \n    event TradeCreated(bytes32 _tradeId, address _fromParty, address _toParty, uint _amount, uint _tradeDate);\n\n    function  addTrade(bytes32 _tradeId, address _fromParty, address _toParty, uint _amount, uint _tradeDate) external;\n\n    function getTrade(bytes32 _tradeId) external view returns (address, address, uint, uint);\n\n}\n\n",
-  "sourcePath": "/home/paliwal_gourav/Ethereum/TradeApp/contracts/TradeInterface.sol",
+  "sourcePath": "/home/paliwal_gourav/Ethereum/EthereumTraining/TradeApp/contracts/TradeInterface.sol",
   "ast": {
-    "absolutePath": "/home/paliwal_gourav/Ethereum/TradeApp/contracts/TradeInterface.sol",
+    "absolutePath": "/home/paliwal_gourav/Ethereum/EthereumTraining/TradeApp/contracts/TradeInterface.sol",
     "exportedSymbols": {
       "TradeInterface": [
         196
@@ -620,7 +620,7 @@
     "src": "0:396:2"
   },
   "legacyAST": {
-    "absolutePath": "/home/paliwal_gourav/Ethereum/TradeApp/contracts/TradeInterface.sol",
+    "absolutePath": "/home/paliwal_gourav/Ethereum/EthereumTraining/TradeApp/contracts/TradeInterface.sol",
     "exportedSymbols": {
       "TradeInterface": [
         196
@@ -1142,7 +1142,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.11",
-  "updatedAt": "2019-06-17T11:14:29.387Z",
+  "updatedAt": "2019-06-19T09:35:04.713Z",
   "devdoc": {
     "methods": {}
   },
